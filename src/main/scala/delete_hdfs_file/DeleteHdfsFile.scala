@@ -2,6 +2,7 @@ package delete_hdfs_file
 
 import org.apache.hadoop.fs.Path
 import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.sql.SparkSession
 
 object DeleteHdfsFile {
 
@@ -30,6 +31,8 @@ object DeleteHdfsFile {
   }
 
   def main(args: Array[String]): Unit = {
+    /*val spark = SparkSession.builder.appName("DeleteHdfsFile").master("yarn-client").getOrCreate
+    val sc = spark.sparkContext*/
     val conf = new SparkConf().setAppName("DeleteHdfsFile")
     val sc = new SparkContext(conf)
 
