@@ -1,5 +1,7 @@
 package df_groupby_agg
 
+import org.apache.spark.sql.functions.collect_list
+
 object DFGroupByAgg {
 
   def main(args: Array[String]): Unit = {
