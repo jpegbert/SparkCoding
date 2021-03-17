@@ -64,7 +64,7 @@ object Rdd2DF {
       StructField("name",StringType,true)::
       StructField("age",IntegerType,true) ::Nil
     )
-    val df : DataFrame = ssc.createDataFrame(peopleRDD, structType)
+    val df = ssc.createDataFrame(peopleRDD, structType)
     /*df.registerTempTable("peopel")
     ssc.sql("select * from peopel").show()
     sc.stop()*/
